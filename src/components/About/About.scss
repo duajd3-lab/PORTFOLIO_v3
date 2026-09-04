@@ -1,0 +1,695 @@
+.about {
+  position: relative;
+  overflow: hidden;
+
+  padding: 140px 24px 150px;
+
+  color: #eaf6ff;
+
+  background:
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(33, 180, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 82% 62%,
+      rgba(35, 95, 190, 0.08),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #020611 0%,
+      #030b19 48%,
+      #020817 100%
+    );
+
+  border-top:
+    1px solid
+    rgba(111, 199, 255, 0.07);
+}
+
+
+/* ========================================
+   BACKGROUND GRID
+======================================== */
+
+.about::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    linear-gradient(
+      rgba(115, 191, 255, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(115, 191, 255, 0.11) 1px,
+      transparent 1px
+    );
+
+  background-size: 120px 120px;
+}
+
+
+/* glow */
+
+.about::after {
+  content: '';
+
+  position: absolute;
+
+  left: 17%;
+  top: 33%;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(38, 197, 255, 0.09),
+      transparent 68%
+    );
+
+  filter: blur(40px);
+}
+
+
+/* ========================================
+   INNER
+======================================== */
+
+.about-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.about small {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--cyan, #40e8ff);
+
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.24em;
+}
+
+
+.about h2 {
+  margin: 0;
+
+  color: #edf8ff;
+
+  font-family: var(--display);
+
+  font-size:
+    clamp(
+      3.4rem,
+      7vw,
+      6.2rem
+    );
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* ========================================
+   ABOUT GRID
+======================================== */
+
+.about-grid {
+  //display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.9fr);
+
+  align-items: start;
+
+  gap:
+    clamp(
+      70px,
+      9vw,
+      120px
+    );
+
+  margin-top: 90px;
+}
+
+
+/* ========================================
+   BIO
+======================================== */
+
+.bio {
+  position: relative;
+
+  padding: 0 48px 120px;
+
+}
+
+
+/* vertical cyan line */
+
+.bio::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 1px;
+  height: calc(100% - 4px);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--cyan, #40e8ff) 0%,
+      rgba(64, 232, 255, 0.22) 45%,
+      transparent 100%
+    );
+}
+
+
+/* starting point */
+
+.bio::after {
+  content: '';
+
+  position: absolute;
+
+  left: -4px;
+  top: 3px;
+
+  width: 9px;
+  height: 9px;
+
+  background:
+    var(--cyan, #40e8ff);
+
+  box-shadow:
+    0 0 14px
+    rgba(64, 232, 255, 0.6);
+}
+
+
+.bio span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color:
+    rgba(130, 173, 205, 0.9);
+
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+.bio p {
+  max-width: 540px;
+
+  margin: 0;
+
+  color:
+    rgba(184, 205, 222, 0.76);
+
+  font-size:
+    clamp(
+      0.94rem,
+      1.08vw,
+      1.03rem
+    );
+
+  line-height: 1.9;
+
+  letter-spacing: -0.01em;
+}
+
+
+.bio strong {
+  display: block;
+
+  margin:
+    30px
+    0
+    0;
+
+  color: #f1f9ff;
+
+  font-size:
+    clamp(
+      1.55rem,
+      2.2vw,
+      2rem
+    );
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* ========================================
+   ABOUT LINK
+======================================== */
+
+.bio a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 27px;
+
+  padding-bottom: 6px;
+
+  color: var(--cyan, #40e8ff);
+
+  font-size: 0.66rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid
+    rgba(64, 232, 255, 0.3);
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.bio a svg {
+  font-size: 0.9rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.bio a:hover {
+  color: #fff;
+
+  border-color:
+    var(--cyan, #40e8ff);
+
+  transform: translateX(4px);
+}
+
+
+.bio a:hover svg {
+  transform:
+    translate(
+      2px,
+      -2px
+    );
+}
+
+
+/* ========================================
+   EDUCATION
+======================================== */
+
+.values {
+  position: relative;
+
+  padding:
+    30px
+    30px
+    28px;
+
+  border:
+    1px solid
+    rgba(93, 198, 255, 0.16);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 31, 58, 0.72),
+      rgba(3, 14, 31, 0.82)
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* top light */
+
+.values::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(64, 232, 255, 0.6),
+      transparent
+    );
+}
+
+
+/* corner decoration */
+
+.values::after {
+  content: '';
+
+  position: absolute;
+
+  right: 14px;
+  top: 14px;
+
+  width: 11px;
+  height: 11px;
+
+  border-top:
+    1px solid
+    rgba(64, 232, 255, 0.5);
+
+  border-right:
+    1px solid
+    rgba(64, 232, 255, 0.5);
+}
+
+
+/* EDUCATION */
+
+.values > strong {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: #eef8ff;
+
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* small cyan marker */
+
+.values > strong::before {
+  content: '';
+
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  background:
+    var(--cyan, #40e8ff);
+
+  box-shadow:
+    0 0 12px
+    rgba(64, 232, 255, 0.5);
+}
+
+
+/* timeline items */
+
+.values p {
+  position: relative;
+
+  margin: 0;
+
+  padding:
+    0
+    0
+    27px
+    30px;
+
+  color:
+    rgba(184, 205, 222, 0.75);
+
+  font-size: 0.84rem;
+
+  line-height: 1.75;
+}
+
+
+/* 마지막 항목 */
+
+.values p:last-child {
+  padding-bottom: 0;
+}
+
+
+/* timeline line */
+
+.values p::before {
+  content: '';
+
+  position: absolute;
+
+  left: 5px;
+  top: 6px;
+
+  width: 1px;
+  height: 100%;
+
+  background:
+    rgba(83, 194, 244, 0.18);
+}
+
+
+.values p:last-child::before {
+  height: 8px;
+}
+
+
+/* timeline dot */
+
+.values p::after {
+  content: '';
+
+  position: absolute;
+
+  left: 2px;
+  top: 7px;
+
+  width: 7px;
+  height: 7px;
+
+  border:
+    1px solid
+    rgba(64, 232, 255, 0.75);
+
+  background:
+    #061426;
+
+  box-shadow:
+    0 0 8px
+    rgba(64, 232, 255, 0.22);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .about {
+    padding:
+      110px
+      20px
+      120px;
+  }
+
+
+  .about-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 60px;
+
+    margin-top: 65px;
+  }
+
+
+  .bio {
+    max-width: 680px;
+
+    padding-left: 38px;
+  }
+
+
+  .values {
+    width: 100%;
+    max-width: 680px;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .about {
+    padding:
+      90px
+      16px
+      100px;
+  }
+
+
+  .about small {
+    font-size: 0.55rem;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .about h2 {
+    font-size:
+      clamp(
+        3rem,
+        16vw,
+        4.5rem
+      );
+  }
+
+
+  .about-grid {
+    gap: 45px;
+
+    margin-top: 48px;
+  }
+
+
+  .bio {
+    padding-left: 25px;
+  }
+
+
+  .bio::after {
+    left: -3px;
+
+    width: 7px;
+    height: 7px;
+  }
+
+
+  .bio span {
+    margin-bottom: 14px;
+
+    font-size: 0.59rem;
+  }
+
+
+  .bio p {
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+  }
+
+
+  .bio strong {
+    margin-top: 23px;
+
+    font-size: 1.4rem;
+  }
+
+
+  .bio a {
+    margin-top: 22px;
+
+    font-size: 0.59rem;
+  }
+
+
+  .values {
+    padding:
+      24px
+      20px;
+  }
+
+
+  .values > strong {
+    margin-bottom: 24px;
+
+    font-size: 0.65rem;
+  }
+
+
+  .values p {
+    padding:
+      0
+      0
+      23px
+      26px;
+
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+}
