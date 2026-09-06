@@ -1,0 +1,532 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  padding: 130px 0 0;
+
+  color: #eef8ff;
+
+  background:
+    radial-gradient(
+      circle at 78% 28%,
+      rgba(34, 176, 255, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020817 0%,
+      #020611 100%
+    );
+
+  border-top:
+    1px solid
+    rgba(107, 198, 255, 0.08);
+}
+
+
+/* ========================================
+   BACKGROUND GRID
+======================================== */
+
+.contact::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    linear-gradient(
+      rgba(114, 190, 255, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(114, 190, 255, 0.11) 1px,
+      transparent 1px
+    );
+
+  background-size: 120px 120px;
+}
+
+
+/* glow */
+
+.contact::after {
+  content: '';
+
+  position: absolute;
+
+  right: 8%;
+  top: 18%;
+
+  width: 460px;
+  height: 460px;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 205, 255, 0.1),
+      transparent 68%
+    );
+
+  filter: blur(40px);
+}
+
+
+/* ========================================
+   INNER
+======================================== */
+
+.contact-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+
+  padding:
+    0
+    24px
+    120px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   KICKER
+======================================== */
+
+.contact small {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--cyan, #40e8ff);
+
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.24em;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.contact h2 {
+  margin: 0;
+
+  color: #edf8ff;
+
+  font-family: var(--display);
+
+  font-size:
+    clamp(
+      3.4rem,
+      7vw,
+      6.2rem
+    );
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+
+.contact h2 span {
+  color: var(--cyan, #40e8ff);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.contact p {
+  max-width: 620px;
+
+  margin:
+    42px
+    0
+    48px;
+
+  color:
+    rgba(181, 204, 222, 0.74);
+
+  font-size:
+    clamp(
+      0.92rem,
+      1.05vw,
+      1rem
+    );
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   CONTACT LINKS
+======================================== */
+
+.contact-links {
+  width: min(620px, 100%);
+
+  display: grid;
+
+  border-top:
+    1px solid
+    rgba(102, 198, 255, 0.12);
+}
+
+
+/* link */
+
+.contact-links a {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    minmax(0, 1fr)
+    30px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 72px;
+
+  padding:
+    0
+    8px;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid
+    rgba(102, 198, 255, 0.12);
+
+  color:
+    rgba(228, 242, 252, 0.88);
+
+  text-decoration: none;
+
+  font-size:
+    clamp(
+      1rem,
+      1.5vw,
+      1.25rem
+    );
+
+  font-weight: 700;
+
+  transition:
+    padding 0.3s ease,
+    color 0.25s ease,
+    background 0.3s ease,
+    border-color 0.25s ease;
+}
+
+
+/* cyan line on hover */
+
+.contact-links a::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 2px;
+  height: 0;
+
+  transform:
+    translateY(-50%);
+
+  background:
+    var(--cyan, #40e8ff);
+
+  box-shadow:
+    0 0 12px
+    rgba(64, 232, 255, 0.55);
+
+  transition:
+    height 0.3s ease;
+}
+
+
+/* first icon */
+
+.contact-links a svg:first-child {
+  color:
+    rgba(100, 213, 255, 0.8);
+
+  font-size: 1.25rem;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* arrow icon */
+
+.contact-links a svg:last-child {
+  justify-self: end;
+
+  color:
+    var(--cyan, #40e8ff);
+
+  opacity: 0;
+
+  transform:
+    translate(-7px, 7px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+
+/* hover */
+
+.contact-links a:hover {
+  padding-left: 18px;
+
+  color: #fff;
+
+  border-color:
+    rgba(64, 232, 255, 0.25);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 149, 210, 0.1),
+      transparent 70%
+    );
+}
+
+
+.contact-links a:hover::before {
+  height: 34px;
+}
+
+
+.contact-links a:hover svg:first-child {
+  color:
+    var(--cyan, #40e8ff);
+
+  transform: scale(1.08);
+}
+
+
+.contact-links a:hover svg:last-child {
+  opacity: 1;
+
+  transform:
+    translate(0, 0);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding:
+    24px
+    max(
+      24px,
+      calc((100% - 1180px) / 2)
+    );
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top:
+    1px solid
+    rgba(107, 199, 255, 0.1);
+
+  background:
+    rgba(1, 7, 18, 0.55);
+
+  color:
+    rgba(122, 157, 184, 0.6);
+
+  font-size: 0.64rem;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* logo */
+
+footer b {
+  color:
+    #eef8ff;
+
+  font-family: var(--display);
+
+  font-size: 1.45rem;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+
+footer b::after {
+  content: '.';
+
+  color:
+    var(--cyan, #40e8ff);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding-top: 110px;
+  }
+
+
+  .contact-inner {
+    padding:
+      0
+      20px
+      100px;
+  }
+
+
+  .contact-links {
+    max-width: 600px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding-top: 90px;
+  }
+
+
+  .contact-inner {
+    padding:
+      0
+      16px
+      80px;
+  }
+
+
+  .contact small {
+    font-size: 0.55rem;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .contact h2 {
+    font-size:
+      clamp(
+        3rem,
+        16vw,
+        4.5rem
+      );
+  }
+
+
+  .contact p {
+    margin:
+      32px
+      0
+      38px;
+
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+  }
+
+
+  .contact-links a {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr)
+      24px;
+
+    min-height: 62px;
+
+    font-size: 0.92rem;
+  }
+
+
+  .contact-links a svg:first-child {
+    font-size: 1.05rem;
+  }
+
+
+  footer {
+    padding:
+      20px
+      16px;
+
+    gap: 18px;
+
+    font-size: 0.55rem;
+  }
+
+
+  footer b {
+    font-size: 1.2rem;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+}
