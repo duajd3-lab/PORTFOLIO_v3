@@ -1,7 +1,7 @@
 .projects {
   position: relative;
 
-  padding: 140px 24px 160px;
+  padding: 120px 0 130px;
 
   overflow: hidden;
 
@@ -86,9 +86,7 @@
   position: relative;
   z-index: 2;
 
-  width: min(1180px, 100%);
-
-  margin: 0 auto;
+  
 }
 
 
@@ -698,7 +696,7 @@
   margin:
     16px
     0
-    26px;
+    15px;
 
   color: #eff8ff;
 
@@ -1136,7 +1134,7 @@
   }
 
   .art {
-    height: 265px;
+    height: 100%;
   }
 
   .art-top {
